@@ -1,0 +1,536 @@
+body{
+    font-size: 16px;
+}
+
+.header{
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: 1fr 3fr 3fr;
+    align-items: center;
+}
+
+.header .logo{
+    margin-left: 50px;
+}
+
+.header .logo img{
+    width: 200px;
+}
+
+.header .search{
+    display: flex;
+    margin-left: 70px;
+}
+
+.header .search .search_chu{
+    width: 400px;
+    height: 30px;
+    background:#fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #bbb8b8;
+    font-size: 16px;
+}
+
+.header .search .search_icon{
+    width: 70px;
+    height: 33px;
+    background:#eeeded;
+    border: 2px solid #bbb8b8;
+    box-shadow: 0 0 5px #bbb8b8;
+}
+
+.header .search .search_icon img{
+    width: 30px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.header .logo_brand{
+    position:relative;
+    display:flex;
+    gap: 40px;
+    margin-left: 50px;
+}
+
+.header .logo_brand div{
+    height: 50px;
+}
+
+.header .logo_brand img{
+    width: 40px;
+    height: 40px;
+    object-fit: fill;
+}
+
+.header .logo_brand div{
+    display:flex;
+    position:relative;
+}
+
+.header .logo_brand div:hover{
+    cursor: pointer;
+}
+
+.header .logo_brand p{
+    margin-left: 10px;
+}
+
+.header .logo_brand .giohang{
+    z-index: 1;
+    margin-left: -20px;
+}
+
+.header .logo_brand .giohang::before{
+    position:absolute;
+    content:"0";
+    background: red;
+    width: 11px;
+    height: 18px;
+    border-radius: 50%;
+    margin-left: 13px;
+    margin-top: -6px;
+    padding-left: 3px;
+}
+
+.header .logo_brand .giohang::after {
+    content: "Không có sản phẩm nào trong giỏ hàng";
+    position:absolute;
+    border: 2px solid transparent; 
+    box-shadow: 0 0 5px transparent; 
+    background: #fff;
+    margin-top: 50px;
+    margin-left: -170px;
+    padding: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.header .logo_brand .giohang:hover::after {
+    border-color: #bbb8b8; 
+    box-shadow: 0 0 5px #bbb8b8; 
+    visibility: visible;
+    opacity:1;
+}
+
+.header .logo_brand .taikhoan{
+    width: 165px;
+    margin-left: 10px;
+}
+
+.header .logo_brand .taikhoan .nd_an{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 190px;
+    background:#fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #bbb8b8;
+    margin-top: 50px;
+    margin-left: -180px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.header .logo_brand .taikhoan .nd_an p:not(:last-child){
+    border-bottom: 1px solid #bbb8b8;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+
+.header .logo_brand .taikhoan .nd_an p:not(:first-child){
+    margin-top: 0;
+}
+
+.header .logo_brand .taikhoan:hover .nd_an{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.header .logo_brand .taikhoan .nd_an p:hover,
+.header .logo_brand .taikhoan .nd_an a:hover{
+    color:red;
+}
+
+.label{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.label .label_ten{
+    display:flex;
+    gap: 40px;
+    background: rgb(239, 60, 10);
+    color:#fff;
+    z-index: 0;
+}
+
+.label .label_ten p:first-child{
+    margin-left: 40px;
+}
+
+.label .label_ten p:hover{
+    cursor: pointer;
+}
+
+.label .label_ten .ten{
+    z-index: 2;
+}
+
+.label .label_ten .ten .ten_gt{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    max-height: auto;
+    margin-left: 30px;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #bbb8b8;
+    opacity: 0;
+    visibility:hidden;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.label .label_ten .ten:nth-child(3):hover .ten_gt{
+    visibility: visible;
+    opacity: 1;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #bbb8b8;
+}
+
+
+.label .label_ten .ten .ten_gt p:first-child,
+.label .label_ten .ten .ten_gt a:first-child{
+    margin-left: 0%;
+    padding: 10px;
+}
+
+.label .label_ten .ten .ten_gt p:last-child,
+.label .label_ten .ten .ten_gt a:last-child{
+    border-bottom: none;
+    margin-bottom: 5px;
+}
+
+.label .label_ten .ten .ten_gt p,
+.label .label_ten .ten .ten_gt a{
+    display: flex;
+    padding-left: 10px;
+    color:#000;
+    border-bottom: 1px solid #bbb8b8;
+    margin-top: 0;
+}
+
+.label .label_ten .ten .ten_gt p:not(:first-child){
+    padding-bottom: 5px;
+}
+
+.label .label_ten .ten .ten_gt p:hover{
+    color:red;
+}
+
+.label .label_ten .ten:nth-child(4):hover .ten_gt{
+    visibility: visible;
+    opacity: 1;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #bbb8b8;
+}
+
+.label .label_ten .ten:nth-child(6):hover .ten_gt{
+    visibility: visible;
+    opacity: 1;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #bbb8b8;
+}
+
+.header .logo_brand .taikhoan .nd_an a{
+    text-decoration: none;
+    color:#000;
+}
+
+.label .label_ten .ten a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.label .label_ten .ten .sp{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background: #f5f5f5;
+    height: 400px;
+    overflow:auto;
+    position:absolute;
+    flex-direction: column;
+    margin-left: -100px;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #bbb8b8;
+    opacity: 0;
+    visibility:hidden;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+    transition: 0.5s ease;
+}
+
+.label .label_ten .ten:nth-child(2):hover .sp{
+    visibility: visible;
+    opacity: 1;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #bbb8b8;
+}
+
+.label .label_ten .ten .sp .sp_1{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.label .label_ten .ten .sp .sp_1:not(:first-child){
+    margin-left: 20px;
+}
+
+.label .label_ten .ten .sp .sp_1 a,
+.label .label_ten .ten .sp .sp_1 b{
+    margin-bottom: 20px;
+    color:#000;
+    display:block;
+    width: 200px;
+    height: 20px;
+    transition: 0.5s ease;
+}
+
+.label .label_ten .ten .sp .sp_1 a:not(:last-child),
+.label .label_ten .ten .sp .sp_1 b:not(:last-child){
+    border-bottom: 1px solid #eeebeb;
+    padding-bottom: 5px;
+}
+
+.label .label_ten .ten .sp .sp_1 a:hover{
+    color:rgb(240, 74, 74);
+}
+
+/*CONTENT*/
+
+.thetv{
+    display:flex;
+    width: 95%;
+    height: 30px;
+    background: #f8f6f6;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.thetv .trangchu a{
+    text-decoration:none;
+    color:#000;
+}
+
+.thetv .trangchu a:hover{
+    color:red;
+}
+
+
+.content{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 30px;
+}
+
+.content .gioithieu p{
+    text-align: center;
+}
+
+.content .img img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.content .faq .tieude{
+    font-size: 40px;
+    color:red;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.content .faq .nd{
+    margin-top: 40px;
+}
+
+.content .faq .nd .cau{
+    display:flex;
+    border-top: 2px solid #747171;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.content .faq .nd .cau p:hover,
+.content .faq .nd .cau img:hover{
+    cursor:pointer;
+}
+
+.content .faq .nd .cau p{
+    color:red;
+    font-size: 24px;
+    width: 900px;
+}
+
+.content .faq .nd .cau img{
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 100px;
+    background: #eeebeb;
+    padding-left: 40px;
+    padding-top: 20px;
+    height: 60vh;
+    color:#343333;
+}
+
+.email{
+    display:flex;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.email .email_nhap input{
+    position:absolute;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 10px;
+    margin-left: -30px;
+}
+
+.email .email_nhap img{
+    position:relative;
+    height: 45px;
+    width: 70px;
+    margin-left: 380px;
+}
+
+.email .email_nhap img:hover{
+    cursor: pointer;
+    background-image: red;
+}
+
+.email img{
+    width: 40px;
+    height: 30px;
+    object-fit:cover;
+}
+
+.email .theodoi{
+    margin-left: 30%;
+    font-size: 18px;
+}
+
+.email .icon{
+    display:flex;
+    margin-left: 10%;
+    gap: 20px;
+}
+
+.email .icon img:hover{
+    cursor:pointer;
+} 
+
+.thongtin{
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.thongtin .hotline b:nth-child(2){
+    display:flex;
+    color:red;
+    font-size: 34px;
+    margin-top: 5px;
+}
+
+.thongtin .hotline b:nth-child(2):hover{
+    cursor:pointer;
+}
+
+.thongtin .hotline i{
+    display:block;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.thongtin .hotline img{
+    width: 30px;
+    height: 30px;
+}
+
+.thongtin .hotline .hotline_email{
+    display: flex;
+    margin-top: 15px;
+}
+
+.thongtin .hotline .hotline_email:hover{
+    cursor:pointer;
+    color:red;
+}
+
+.thongtin .hotline p{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.dieukhoan p:hover,
+.hotroKH p:hover{
+    cursor:pointer;
+    color:red;
+}
+
+.hotroKH img{
+    width: 150px;
+}
+
+.diachi_cuahang b{
+    display:flex;
+    margin-left: 25%;
+}
+
+.diachi_cuahang img{
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.diachi_cuahang b:hover,
+.diachi_cuahang img:hover{
+    cursor:pointer;
+}
+
+.diachi_chitiet{
+    margin-top: 30px;
+    margin-left: 25%;
+    color:#545353;
+}
+
+.chitiet_chung{
+    display:flex;
+    margin-top: -15px;
+    margin-left: -5%;
+}
